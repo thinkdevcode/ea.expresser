@@ -53,8 +53,8 @@
                 }
                 else {
                     count++;
-                    string exprName = "E" + exprLookup.Count;
-                    exprLookup.Add(exprName, BuildSimpleOperatorExpression(final));
+                    Operator(final);
+                    string exprName = "E" + (exprLookup.Count - 1);
                     query = query.Replace("(" + final + ")", exprName);
                 }
             }
